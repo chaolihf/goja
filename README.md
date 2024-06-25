@@ -20,7 +20,7 @@ Features
    pass all of them. See .tc39_test262_checkout.sh for the latest working commit id.
  * Capable of running Babel, Typescript compiler and pretty much anything written in ES5.
  * Sourcemaps.
- * Most of ES6 functionality, still work in progress, see https://github.com/dop251/goja/milestone/1?closed=1
+ * Most of ES6 functionality, still work in progress, see https://github.com/chaolihf/goja/milestone/1?closed=1
 
 Known incompatibilities and caveats
 -----------------------------------
@@ -48,7 +48,7 @@ key = undefined; // Now it does
 The reason for it is the limitation of the Go runtime. At the time of writing (version 1.15) having a finalizer
 set on an object which is part of a reference cycle makes the whole cycle non-garbage-collectable. The solution
 above is the only reasonable way I can think of without involving finalizers. This is the third attempt
-(see https://github.com/dop251/goja/issues/250 and https://github.com/dop251/goja/issues/199 for more details).
+(see https://github.com/chaolihf/goja/issues/250 and https://github.com/chaolihf/goja/issues/199 for more details).
 
 Note, this does not have any effect on the application logic, but may cause a higher-than-expected memory usage.
 
@@ -80,7 +80,7 @@ FAQ
 Although it's faster than many scripting language implementations in Go I have seen
 (for example it's 6-7 times faster than otto on average) it is not a
 replacement for V8 or SpiderMonkey or any other general-purpose JavaScript engine.
-You can find some benchmarks [here](https://github.com/dop251/goja/issues/2).
+You can find some benchmarks [here](https://github.com/chaolihf/goja/issues/2).
 
 ### Why would I want to use it over a V8 wrapper?
 
@@ -106,13 +106,13 @@ it's not possible to pass object values between runtimes.
 
 setTimeout() assumes concurrent execution of code which requires an execution
 environment, for example an event loop similar to nodejs or a browser.
-There is a [separate project](https://github.com/dop251/goja_nodejs) aimed at providing some NodeJS functionality,
+There is a [separate project](https://github.com/chaolihf/goja_nodejs) aimed at providing some NodeJS functionality,
 and it includes an event loop.
 
 ### Can you implement (feature X from ES6 or higher)?
 
 I will be adding features in their dependency order and as quickly as time permits. Please do not ask
-for ETAs. Features that are open in the [milestone](https://github.com/dop251/goja/milestone/1) are either in progress
+for ETAs. Features that are open in the [milestone](https://github.com/chaolihf/goja/milestone/1) are either in progress
 or will be worked on next.
 
 The ongoing work is done in separate feature branches which are merged into master when appropriate.
@@ -331,4 +331,4 @@ func TestInterrupt(t *testing.T) {
 NodeJS Compatibility
 --------------------
 
-There is a [separate project](https://github.com/dop251/goja_nodejs) aimed at providing some of the NodeJS functionality.
+There is a [separate project](https://github.com/chaolihf/goja_nodejs) aimed at providing some of the NodeJS functionality.

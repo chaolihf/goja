@@ -11,9 +11,9 @@ import (
 
 	"golang.org/x/text/unicode/rangetable"
 
-	"github.com/dop251/goja/file"
-	"github.com/dop251/goja/token"
-	"github.com/dop251/goja/unistring"
+	"github.com/chaolihf/goja/file"
+	"github.com/chaolihf/goja/token"
+	"github.com/chaolihf/goja/unistring"
 )
 
 var (

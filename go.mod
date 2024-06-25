@@ -1,13 +1,16 @@
-module github.com/dop251/goja
+module github.com/chaolihf/goja
 
 go 1.20
 
 require (
-	github.com/dlclark/regexp2 v1.7.0
-	github.com/dop251/goja_nodejs v0.0.0-20211022123610-8dd9abb0616d
+	github.com/dlclark/regexp2 v1.10.0
 	github.com/go-sourcemap/sourcemap v2.1.3+incompatible
-	github.com/google/pprof v0.0.0-20230207041349-798e818bf904
-	github.com/kr/pretty v0.3.0 // indirect
-	golang.org/x/text v0.3.8
+	github.com/google/pprof v0.0.0-20230926050212-f7f687d19a98
+	golang.org/x/text v0.13.0
 	gopkg.in/yaml.v2 v2.4.0
+)
+
+require (
+	github.com/chaolihf/goja_nodejs v0.9.1 // indirect
+	github.com/kr/pretty v0.3.0 // indirect
 )
